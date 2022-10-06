@@ -12,9 +12,12 @@ return require('packer').startup(function()
   use 'neovim/nvim-lspconfig'
   use 'hrsh7th/nvim-cmp'
   use 'hrsh7th/cmp-nvim-lsp'
-  use 'marko-cerovac/material.nvim'
+  --use 'marko-cerovac/material.nvim'
+  use 'gruvbox-community/gruvbox'
   use 'vim-test/vim-test'
   use 'dense-analysis/ale'
+  use 'airblade/vim-gitgutter'
+  use 'simrat39/rust-tools.nvim'
 
 use {
   'kyazdani42/nvim-tree.lua',
@@ -29,15 +32,15 @@ use {
   requires = {'kyazdani42/nvim-web-devicons'}
 }
   
-  require('material').setup({
-   contrast = {
-        sidebars = true, -- Enable contrast for sidebar-like windows ( for example Nvim-Tree )
-        floating_windows = true, -- Enable contrast for floating windows
-        cursor_line = true, -- Enable darker background for the cursor line
-        non_current_windows = true, -- Enable darker background for non-current windows
-        popup_menu = false, -- Enable lighter background for the popup menu
-    }
-  })
+ -- require('material').setup({
+ --  contrast = {
+ --       sidebars = true, -- Enable contrast for sidebar-like windows ( for example Nvim-Tree )
+ --       floating_windows = true, -- Enable contrast for floating windows
+ --       cursor_line = true, -- Enable darker background for the cursor line
+ --       non_current_windows = true, -- Enable darker background for non-current windows
+ --       popup_menu = false, -- Enable lighter background for the popup menu
+ --   }
+ -- })
   
   use {
         'nvim-treesitter/nvim-treesitter',
